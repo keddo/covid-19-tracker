@@ -3,3 +3,16 @@
     overflow: scroll;
     height: 400px;
 }
+
+.table tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table td {
+    padding: 0.5rem;
+}
+
+.table tr:nth-of-type(odd) {
+    background-color: #f2f3f8;
+}
