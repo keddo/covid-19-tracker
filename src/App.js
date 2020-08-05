@@ -3,6 +3,7 @@ import { FormControl, Select, MenuItem } from '@material-ui/core';
 import './App.css';
 
 import InfoBox from './InfoBox';
+import Map from './Map';
 
 function App() {
   //https://disease.sh/v3/covid-19/countries
@@ -57,6 +58,8 @@ function App() {
       {/* Graph */}
 
       {/* Map */}
+
+      <Map/>
     </div>
   );
 }
