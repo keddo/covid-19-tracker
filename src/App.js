@@ -4,6 +4,7 @@ import './App.css';
 
 import InfoBox from './InfoBox';
 import Map from './Map';
+import Table from './Table';
 
 function App() {
   //https://disease.sh/v3/covid-19/countries
@@ -11,7 +12,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
-
+  const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
@@ -19,7 +20,7 @@ function App() {
     .then(data => {
       setCountryInfo(data)
     });
-  });
+  }, []);
   useEffect(() => {
     const getCountriesData = async () => {
       await fetch('https://disease.sh/v3/covid-19/countries')
@@ -29,6 +30,7 @@ function App() {
                   name: country.country,
                   value: country.countryInfo.iso2
                 }));
+                setTableData(data);
                 setCountries(countries);
             });
 
@@ -38,7 +40,7 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    const url = countryCode == 'worldwide' ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryCode}`
+    const url = countryCode === 'worldwide' ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryCode}`
     await fetch(url)
           .then(response => response.json())
           .then(data => {
@@ -78,7 +80,9 @@ function App() {
         {/* Table */}
         <Card>
           <CardContent>
-            <h1>Worldwide Live cases</h1>
+            <h3>Live cases by country</h3>
+              <Table countries={tableData}/>
+            <h3>Worldwide New Cases</h3>
           </CardContent>
         </Card>
       {/* Graph */}
