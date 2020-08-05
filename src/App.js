@@ -17,6 +17,7 @@ function App() {
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
+  const [caseType, setCaseType] = useState('cases');
 
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
@@ -81,18 +82,15 @@ function App() {
       <Map/>
       </div>
 
-      <div className="app__right">
-        {/* Table */}
-        <Card>
+        <Card className="app__right">
           <CardContent>
             <h3>Live cases by country</h3>
               <Table countries={tableData}/>
-            <h3>Worldwide New Cases</h3>
+            <h3>Worldwide New {caseType}</h3>
+              <LineGraph caseType={caseType}/>
           </CardContent>
         </Card>
       {/* Graph */}
-       <LineGraph/>
-      </div>
       
     </div>
   );
