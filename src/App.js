@@ -47,13 +47,11 @@ function App() {
        </FormControl>
       </div>
      
-      {/* Header */}
-      {/* Title and select dropdown input */}
-
+      <div className="app__stats">
       {/* Input boxes */}
       {/* Input boxes */}
       {/* Input boxes */}
-
+      </div>
       {/* Table */}
       {/* Graph */}
 
