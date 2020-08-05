@@ -6,6 +6,11 @@ body {
   background-color: #f5f6fa;
 }
 
+.app {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .app__header {
   display: flex;
   justify-content: space-between;
@@ -13,7 +18,17 @@ body {
   margin-bottom: 20px;
 }
 
+.app__left {
+  flex: 0.9;
+}
+
 .app__stats {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
 }
