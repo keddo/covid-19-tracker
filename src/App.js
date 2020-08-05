@@ -91,7 +91,7 @@ function App() {
           </CardContent>
         </Card>
       {/* Graph */}
-      <LineGraph/>
+       <LineGraph/>
       </div>
       
     </div>
