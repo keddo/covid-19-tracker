@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FormControl, Select, MenuItem, CardContent, Card } from '@material-ui/core';
 import './App.css';
+import '../node_modules/leaflet/dist/leaflet.css'
+
 
 import InfoBox from './InfoBox';
 import Map from './Map';
@@ -18,7 +20,8 @@ function App() {
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
   const [caseType, setCaseType] = useState('cases');
-
+  const [mapCenter, setMapCenter] = useState({lat: 34.80746, lng: -40.4796})
+  const [mapZoom, setMapZoom] = useState(3)
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
     .then(res => res.json())
@@ -79,7 +82,7 @@ function App() {
       <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
       <InfoBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
       </div>
-      <Map/>
+      <Map center={mapCenter} zoom={mapZoom}/>
       </div>
 
         <Card className="app__right">
