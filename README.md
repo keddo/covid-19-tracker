@@ -1,69 +1,57 @@
-## COVID-19 TRACKER PROJECT
-his project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# COVID-19 TRACKER
 
-## Available Scripts
+> In this project I build a [COVID-19](https://covid19.who.int/) tracker application which shows Corona virus cases, deaths and recovery throughout the world. The project support map preview of the pandamic includes around 214 countries of the world.
 
-In the project directory, you can run:
+![screenshot](./app_screenshot.png)
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Open Live Demo](https://covid-19-tracker-48afd.web.app/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- reactjs
+- Backend COVID-19 API
 
-### `npm run build`
+## 🛠 Setup configurations
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get this app ready to run, follow this steps:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Clone this repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        pc:~$ git clone https://github.com/keddo/covid-19-tracker.git
 
-### `npm run eject`
+* Change your directory to the app folder
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        pc:~$ cd covid-19-tracker/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Install required packages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+        pc:~$ npm install
+    
+## How to use it
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Once you have the required packages. 
+* Run the following command on your terminal
+   > pc$ npm start
+## Authors
 
-## Learn More
+👤 **Kedir Abdurahman**
+- Github: [@keddo](https://github.com/keddo)
+- Twitter: [@kedirman](https://twitter.com/kedirman)
+- Linkedin: [Kedir Abdurahman](https://linkedin.com/in/kedirabdurahman/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues and feature requests are welcome!
 
-### Code Splitting
+Feel free to check the [issues page](https://github.com/keddo/covid-19-tracker/issues/1).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 👍 Show your support
 
-### Analyzing the Bundle Size
+Give a ⭐️ if you like this project!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## 📝 License
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is free to use as learning purposes. For any external content (e.g. logo, images, ...), please contact the proper author and check their license of use.
