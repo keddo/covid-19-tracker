@@ -19,7 +19,7 @@ function App() {
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
-  const [caseType, setCaseType] = useState('cases');
+  const [casesType, setCasesType] = useState("cases");
   const [mapCenter, setMapCenter] = useState({lat: 34.80746, lng: -40.4796})
   const [mapZoom, setMapZoom] = useState(3)
 
@@ -87,18 +87,17 @@ function App() {
       <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
       <InfoBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
       </div>
-      <Map countries={mapCountries} center={mapCenter} zoom={mapZoom}/>
+      <Map countries={mapCountries} casesType={casesType} center={mapCenter} zoom={mapZoom}/>
       </div>
 
         <Card className="app__right">
           <CardContent>
             <h3>Live cases by country</h3>
               <Table countries={tableData}/>
-            <h3>Worldwide New {caseType}</h3>
-              <LineGraph caseType={caseType}/>
+            <h3>Worldwide New {casesType}</h3>
+              <LineGraph caseType={casesType}/>
           </CardContent>
         </Card>
-      {/* Graph */}
       
     </div>
   );
