@@ -47,7 +47,7 @@ const options = {
     },
   };
 
-function LineGraph({casesType}) {
+function LineGraph({casesType, ...props}) {
     const url = 'https://disease.sh/v3/covid-19/historical/all?lastdays=120'
     const [data, setData] = useState({});
     
@@ -84,7 +84,7 @@ function LineGraph({casesType}) {
 
     
     return (
-        <div>
+        <div className={props.className}>
       {data?.length > 0 && (
         <Line
           data={{
