@@ -83,9 +83,9 @@ function App() {
       </div>
      
       <div className="app__stats">
-      <InfoBox title="Coronavirus Cases" onClick={ (e) => setCasesType('cases') } cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)} />
-      <InfoBox title="Recovered" onClick={ (e) => setCasesType('recovered') }  cases={prettyPrintStat(countryInfo.todayRecovered)} total={prettyPrintStat(countryInfo.recovered)} />
-      <InfoBox title="Deaths" onClick={ (e) => setCasesType('deaths') }  cases={prettyPrintStat(countryInfo.todayDeaths)} total={prettyPrintStat(countryInfo.deaths)} />
+      <InfoBox title="Coronavirus Cases" casesType={casesType} active={casesType === 'cases'} onClick={ (e) => setCasesType('cases') } cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)} />
+      <InfoBox title="Recovered" casesType={casesType} active={casesType === 'recovered'} onClick={ (e) => setCasesType('recovered') }  cases={prettyPrintStat(countryInfo.todayRecovered)} total={prettyPrintStat(countryInfo.recovered)} />
+      <InfoBox title="Deaths" casesType={casesType} active={casesType === 'deaths'} onClick={ (e) => setCasesType('deaths') }  cases={prettyPrintStat(countryInfo.todayDeaths)} total={prettyPrintStat(countryInfo.deaths)} />
       </div>
       <Map countries={mapCountries} casesType={casesType} center={mapCenter} zoom={mapZoom}/>
       </div>
@@ -95,7 +95,7 @@ function App() {
             <h3>Live cases by country</h3>
               <Table countries={tableData}/>
             <h3>Worldwide New {casesType}</h3>
-              <LineGraph caseType={casesType}/>
+              <LineGraph casesType={casesType}/>
           </CardContent>
         </Card>
       

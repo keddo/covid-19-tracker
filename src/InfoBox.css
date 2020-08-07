@@ -1,5 +1,6 @@
 .infoBox {
     flex: 1;
+    cursor: pointer;
 }
 
 .infoBox:not(:last-child){
@@ -18,4 +19,16 @@
     font-weight: 700 !important;
     font-size: 1rem !important;
     margin-top: 15px !important;    
+}
+
+.infoBox--deaths-selected,
+.infoBox--cases-selected {
+    border-top: 10px solid #FB2700;
+}
+.infoBox--recovered-selected {
+    border-top: 10px solid #51DE24;
+}
+
+.infoBox__cases--green {
+    color: #6EE200;
 }
